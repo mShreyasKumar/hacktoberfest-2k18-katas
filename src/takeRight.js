@@ -5,4 +5,9 @@
 */
 export const takeRight = (arr, n=1) => {
   // TO IMPLEMENT IN ANOTHER PR
+  if (arr && (typeof arr === "string" || arr.constructor === Array)) {
+    return arr.slice(arr.length - n);
+  } else {
+    throw new Error("An array/string is expected");
+  }
 };
